@@ -1,23 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Memory Game</title>
-  <link rel="stylesheet" href="game.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hs SHOP</title>
+    <link rel="stylesheet" href="hs.css">
 </head>
 <body>
-  <div class="scoreboard">
-    <div>🟦 <span id="player1">0</span></div>
-    <div>🔴 <span id="player2">0</span></div>
-  </div>
+    <header>
+        <h1>Hs SHOP</h1>
+    </header>
 
-  <div id="turn-indicator">Turn: 🟦 Player 1</div>
+    <main>
+        <section id="crypto-section" class="product-section">
+            <!-- Card for Crypto Selection -->
+            <div class="card">
+                <h2>Select Crypto</h2>
+                <select id="crypto-selection" class="select-field">
+                    <option value="USDT">USDT (Tether)</option>
+                    <option value="TON">TON (Toncoin)</option>
+                    <option value="SOL">SOL (Solana)</option>
+                </select>
+                
+                <!-- Crypto Details -->
+                <div class="crypto-details">
+                    <select id="crypto-network" class="select-field">
+                        <option value="TRC 20">TRC 20</option>
+                        <option value="BEP 20">BEP 20</option>
+                        <option value="Binance ID">Binance ID</option>
+                        <option value="OKX UID">OKX UID</option>
+                    </select>
+                    <input type="number" id="crypto-quantity" class="input-field" placeholder="Quantity" min="1" value="1">
+                    <input type="text" id="crypto-wallet" class="input-field" placeholder="Wallet Address">
+                    <p><strong>Price: <span id="crypto-price">170</span> Birr</strong></p>
+                    <button type="button" class="buy-btn" onclick="buyCrypto()">Buy</button>
+                </div>
+            </div>
 
-  <div class="game-board" id="gameBoard"></div>
+       <!-- For Star Purchase -->
+<div class="card">
+    <h2>Star Purchase</h2>
+    <input type="number" id="star-quantity" class="input-field" placeholder="Quantity (Min 50)" min="50" value="50">
+    <input type="text" id="star-username" class="input-field" placeholder="Username">
+    <p><strong>Price: <span id="star-price">150</span> Birr</strong></p>
+   <button type="button" class="buy-btn" onclick="buyStar()">Buy</button>
+</div>
 
-  <button class="exit-btn" onclick="location.reload()">EXIT</button>
+<!-- For Premium Purchase -->
+<div class="card">
+    <h2>Premium Purchase</h2>
+    <select id="premium-duration" class="select-field">
+        <option value="3 Months">3 Months</option>
+        <option value="6 Months">6 Months</option>
+        <option value="1 Year">1 Year</option>
+    </select>
+    <input type="text" id="premium-username" class="input-field" placeholder="Username">
+    <p><strong>Price: <span id="premium-price">1200</span> Birr</strong></p>
+<button type="button" class="buy-btn" onclick="buyPremium()">Buy</button>
+</div>
+    </main>
 
-  <script src="game.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

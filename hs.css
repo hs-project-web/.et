@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f4f8;
+    text-align: center;
+}
+
+header {
+    background: #1976d2;
+    color: white;
+    padding: 15px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.product-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #d3d3d3;
+    padding: 20px;
+    margin: 15px;
+    width: 300px;
+    max-width: 350px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: left;
+}
+
+h2 {
+    margin-top: 10px;
+    color: black;
+}
+
+.select-field, .input-field {
+    display: block;
+    width: 100%; /* Equal width for all fields */
+    padding: 8px;
+    margin: 10px 0;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+button.buy-btn {
+    background: #1976d2;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%; /* Ensures button width is equal */
+    cursor: pointer;
+}
+
+button.buy-btn:disabled {
+    background: #cccccc;
+}
+
+p {
+    color: #1976d2;
+}
+
+input[type="number"], input[type="text"] {
+    margin-bottom: 15px;
+}
+
+.crypto-details {
+    display: block;
+}
+
+.card select, .card input {
+    width: 100%;
+}
