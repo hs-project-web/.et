@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+  <div class="scoreboard">
+    <div>🟦 <span id="player1">0</span></div>
+    <div>🔴 <span id="player2">0</span></div>
+  </div>
+
+  <div id="turn-indicator">Turn: 🟦 Player 1</div>
+
+  <div class="game-board" id="gameBoard"></div>
+
+  <button class="exit-btn" onclick="location.reload()">EXIT</button>
+
+  <script src="game.js"></script>
+</body>
+</html>

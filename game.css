@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #87ceeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.scoreboard {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+#turn-indicator {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 60px); /* 2 rows of 5 cards */
+  gap: 15px;
+  background: #2f2f2f;
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 60px;
+  height: 60px;
+  background: #f7b733;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  transform: rotate(5deg);
+  transition: transform 0.3s ease;
+}
+
+.card.flipped {
+  background: #4ecdc4;
+}
+
+.exit-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 10px 20px;
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
